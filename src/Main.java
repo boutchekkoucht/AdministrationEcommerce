@@ -1,4 +1,6 @@
-import com.ensas.ecommerce.views.login;
+import com.ensas.ecommerce.views.Index;
+import com.ensas.ecommerce.views.ProductList;
+import com.ensas.ecommerce.views.Login;
 
 
 public class Main {
@@ -10,7 +12,7 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		new login();
+		new Index();
 	}
 
 }

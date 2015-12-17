@@ -1,6 +1,8 @@
 package com.ensas.ecommerce.views;
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -12,7 +14,7 @@ import javax.swing.JTextField;
 
 
 // class pour  la vue de l'authentification de l'admin
-public class login extends JFrame{
+public class Login extends JPanel{
 
 	/**
 	 * 
@@ -23,19 +25,18 @@ public class login extends JFrame{
 	private JButton connection;
 	
 	
-	public login() {
+	public Login() {
 		
 		login=new JTextField(20);
 		password=new JPasswordField(20);
 		connection=new JButton("login");
 
-		setLayout(new FlowLayout());
-		setSize(500, 200);
-		setVisible(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		add(addLabel(login, "login"));
-		add(addLabel(password, "password"));
-		add(addLabel(connection, ""));
+		setLayout(new GridLayout(3, 1));
+
+
+		add(Panneau.addLabel(login, "login"));
+		add(Panneau.addLabel(password, "password"));
+		add(Panneau.addLabel(connection, ""));
 	}
 
 
@@ -69,14 +70,7 @@ public class login extends JFrame{
 	}
 	
 	
-	public JPanel addLabel(JComponent a,String label){
-		
-		JPanel p=new JPanel();
-		p.add(new JLabel(label));
-		p.add(a);
-		return p;
-		
-	}
+	
 	
 	
 	
