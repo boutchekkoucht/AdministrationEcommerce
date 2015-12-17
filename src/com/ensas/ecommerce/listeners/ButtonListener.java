@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-// listener for buttons
+
 public class ButtonListener implements ActionListener{
 
 	public ButtonListener() {
