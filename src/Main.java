@@ -1,5 +1,5 @@
 import com.ensas.ecommerce.views.Index;
-import com.ensas.ecommerce.views.ProductList;
+import com.ensas.ecommerce.views.Product;
 import com.ensas.ecommerce.views.Login;
 
 

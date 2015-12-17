@@ -8,14 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class ProductList extends JPanel{
+public class Product extends JPanel{
 	
 	
 	private JTextField id,intitule,prix,quantite;
 	
 	
 	
-	public ProductList() {
+	public Product() {
 		// TODO Auto-generated constructor stub
 		
 		
