@@ -3,9 +3,12 @@ package com.ensas.ecommerce.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.ensas.ecommerce.views.AdminCount;
+import com.ensas.ecommerce.views.UsersList;
 import com.ensas.ecommerce.views.Index;
 import com.ensas.ecommerce.views.Login;
 import com.ensas.ecommerce.views.ProductList;
+import com.ensas.ecommerce.views.CommandeList;
 
 
 
@@ -33,6 +36,37 @@ public class ButtonListener implements ActionListener{
 			 index.getBody().removeAll();
 			
 			 index.getBody().add(new ProductList());
+			 index.validate();
+			 index.getBody().repaint();
+			 index.validate();
+		}
+		
+		else if(e.getSource()== index.getListcommande())
+		{
+			 index.getBody().removeAll();
+			
+			 index.getBody().add(new CommandeList());
+			 index.validate();
+			 index.getBody().repaint();
+			 index.validate();
+		}
+		
+		else if(e.getSource()== index.getListeusers())
+		{
+			 index.getBody().removeAll();
+			
+			 index.getBody().add(new UsersList());
+			 index.validate();
+			 index.getBody().repaint();
+			 index.validate();
+		}
+		
+		
+		else if(e.getSource()== index.getAdminCount())
+		{
+			 index.getBody().removeAll();
+			
+			 index.getBody().add(new AdminCount());
 			 index.validate();
 			 index.getBody().repaint();
 			 index.validate();

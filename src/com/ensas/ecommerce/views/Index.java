@@ -13,8 +13,10 @@ public class Index  extends JFrame{
 	
 	JPanel header,body,footer;
 	
-	JButton  login,listpro;
+	JButton  login,listpro,listcommande,listeusers,adminCount;
 	
+	
+
 	public Index() {
 		
 		
@@ -25,13 +27,25 @@ public class Index  extends JFrame{
 		login=new JButton("login");
 		listpro=new JButton("products");	
 		
+		listcommande=new JButton("commandes");
+		
+		listeusers=new JButton("users");
+		adminCount=new JButton("compte");
+		
 		header.add(login);
 		header.add(listpro);
-		
+		header.add(listcommande);
+		header.add(listeusers);
+		header.add(adminCount);
+		//instantiation du listener
 		ButtonListener lis=new ButtonListener(this);
 		
+		//
 		login.addActionListener(lis);
 		listpro.addActionListener(lis);
+		listcommande.addActionListener(lis);
+		listeusers.addActionListener(lis);
+		adminCount.addActionListener(lis);
 		
 		this.add(header,BorderLayout.NORTH);
 		this.add(body,BorderLayout.CENTER);
@@ -42,6 +56,14 @@ public class Index  extends JFrame{
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+	}
+
+	public JButton getListcommande() {
+		return listcommande;
+	}
+
+	public void setListcommande(JButton listcommande) {
+		this.listcommande = listcommande;
 	}
 
 	public JPanel getHeader() {
@@ -84,4 +106,20 @@ public class Index  extends JFrame{
 		this.listpro = listpro;
 	}
 
-}
+	public JButton getAdminCount() {
+		return adminCount;
+	}
+
+	public void setAdminCount(JButton admincount) {
+		adminCount = admincount;
+	}
+
+	public JButton getListeusers() {
+		return listeusers;
+	}
+
+	public void setListeusers(JButton listeusers) {
+		this.listeusers = listeusers;
+	}
+
+}	
