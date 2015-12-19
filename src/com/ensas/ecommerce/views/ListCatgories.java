@@ -18,11 +18,11 @@ import com.ensas.ecommerce.datas.Product;
 
 
 
-public class ListProducts extends JPanel{
+public class ListCatgories extends JPanel{
 
 	
 	private JTable products;
-	public ListProducts() {
+	public ListCatgories(List<Categorie> liste) {
 		// TODO Auto-generated constructor stub
 		
 		
@@ -30,12 +30,17 @@ public class ListProducts extends JPanel{
 		    
 		    products=new JTable(model);
 		    model.addColumn("id");
-		    model.addColumn("designation");
-		    model.addColumn("description");
+		    model.addColumn("user");
+		    model.addColumn("date");
 		    model.addColumn("details");
 		    
+		    for(Categorie c:liste){
+				   model.addRow(new Object[] {c.getIdCategorie(),c.getNomCategorie(),c.getDescription(),"detail"});
+				   
+			   }
+			 
 		 
-		    	
+		    	// model.addRow(new Object[] {c.getIdCategorie(),c.getNomCategorie(),c.get,"detail"});
 		    
 		   
 		    add(new JScrollPane(products));

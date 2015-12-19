@@ -13,7 +13,7 @@ public class Index  extends JFrame{
 	
 	JPanel header,body,footer;
 	
-	JButton  login,listpro,listcommande,listeusers,adminCount;
+	JButton  login,listpro,listcommande,listeusers,adminCount,listcat;
 	
 	
 
@@ -26,7 +26,7 @@ public class Index  extends JFrame{
 		 
 		login=new JButton("login");
 		listpro=new JButton("products");	
-		
+		listcat=new JButton("categories");	
 		listcommande=new JButton("commandes");
 		
 		listeusers=new JButton("users");
@@ -34,6 +34,7 @@ public class Index  extends JFrame{
 		
 		header.add(login);
 		header.add(listpro);
+		header.add(listcat);
 		header.add(listcommande);
 		header.add(listeusers);
 		header.add(adminCount);
@@ -43,6 +44,7 @@ public class Index  extends JFrame{
 		//
 		login.addActionListener(lis);
 		listpro.addActionListener(lis);
+		listcat.addActionListener(lis);
 		listcommande.addActionListener(lis);
 		listeusers.addActionListener(lis);
 		adminCount.addActionListener(lis);
@@ -57,6 +59,23 @@ public class Index  extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
+
+	
+	
+	
+	public JButton getListcat() {
+		return listcat;
+	}
+
+
+
+
+	public void setListcat(JButton listcat) {
+		this.listcat = listcat;
+	}
+
+
+
 
 	public JButton getListcommande() {
 		return listcommande;
