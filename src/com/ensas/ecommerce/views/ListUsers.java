@@ -11,7 +11,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.text.TableView.TableRow;
 
-import com.ensas.ecommerce.datas.Product;
+
+import com.sun.faces.renderkit.html_basic.ButtonRenderer;
 
 
 
@@ -33,7 +34,7 @@ public class ListUsers extends JPanel{
 		    
 		 
 		    
-		    model.addRow(new Object[] {1,"mohamed","boutchekkoucht","boutchekkoucht@gmail.om"});
+		    model.addRow(new Object[] {1,"mohamed","boutchekkoucht",new ButtonRenderer()});
 		    add(new JScrollPane(products));
 		    
 	}

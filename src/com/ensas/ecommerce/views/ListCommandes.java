@@ -11,7 +11,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.text.TableView.TableRow;
 
-import com.ensas.ecommerce.datas.Product;
 
 
 
@@ -30,9 +29,7 @@ public class ListCommandes extends JPanel{
 		    model.addColumn("product");
 		    model.addColumn("details");
 		    
-		    Product p=new Product(5,"hhh","jj");
 		    
-		    model.addRow(new Object[] { p.getId(), p.getIntitule(),new JButton(p.getPrix()) });
 		    add(new JScrollPane(products));
 		    
 	}

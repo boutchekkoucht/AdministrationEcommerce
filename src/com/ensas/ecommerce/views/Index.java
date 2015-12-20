@@ -5,10 +5,11 @@ import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import com.ensas.ecommerce.listeners.ButtonListener;
 
-public class Index  extends JFrame{
+public class  Index  extends JFrame{
 
 	
 	JPanel header,body,footer;
@@ -49,8 +50,15 @@ public class Index  extends JFrame{
 		listeusers.addActionListener(lis);
 		adminCount.addActionListener(lis);
 		
+	
+		
+		
+		
+		JScrollPane bodyy = new JScrollPane(body);
+		
+		
 		this.add(header,BorderLayout.NORTH);
-		this.add(body,BorderLayout.CENTER);
+		this.add(bodyy,BorderLayout.CENTER);
 		this.add(footer,BorderLayout.SOUTH);
 		
 		

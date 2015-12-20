@@ -36,4 +36,17 @@ public class CategorieModel {
 	public Categorie  getCategorie(Long id){
 		return cat.getCategorie(id);
 	}
+	
+	public void addCategorie(Categorie c){
+		cat.addCategorie(c);
+			
+	}
+	
+	public void editCategorie(Categorie c){
+		cat.updateCategorie(c);
+	}
+	public void deleteCategorie(Long id){
+		cat.removeCategorie(id);
+	}
+	
 }
