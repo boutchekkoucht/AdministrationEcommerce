@@ -9,15 +9,15 @@ import com.ensas.ecommerce.models.CategorieModel;
 import com.ensas.ecommerce.models.ProduitModel;
 import com.ensas.ecommerce.views.AdminCount;
 import com.ensas.ecommerce.views.ListCommandes;
-import com.ensas.ecommerce.views.ListProducts;
 import com.ensas.ecommerce.views.ListUsers;
 import com.ensas.ecommerce.views.User;
 import com.ensas.ecommerce.views.Index;
 import com.ensas.ecommerce.views.Login;
-import com.ensas.ecommerce.views.Product;
 import com.ensas.ecommerce.views.Commande;
 import com.ensas.ecommerce.views.categorie.AddCategorie;
 import com.ensas.ecommerce.views.categorie.ListCatgories;
+import com.ensas.ecommerce.views.produit.AddProduit;
+import com.ensas.ecommerce.views.produit.ListProduits;
 
 
 
@@ -44,12 +44,26 @@ public class ButtonListener implements ActionListener{
 		}
 		else if(e.getSource()== index.getListpro())
 		{
-			 index.getBody().removeAll();
-			 index.getFooter().removeAll();
-			 index.getBody().add(new ListProducts(index));
+			index.getFooter().removeAll();
+			 
+			 JButton addpro=new JButton("add produit");
+			
+			
+			 setBodyProduit();
+			 index.getFooter().add(addpro);
 			 index.validate();
-			 index.getBody().repaint();
+			 
+			 index.getFooter().repaint();
 			 index.validate();
+			 addpro.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					new AddProduit(index);
+				}
+			});
+			 
 		}
 		else if(e.getSource()== index.getListcat())
 		{
@@ -117,6 +131,13 @@ public class ButtonListener implements ActionListener{
 		 CategorieModel m=new CategorieModel(); 
 		 index.getBody().repaint();
 		 index.getBody().add(new ListCatgories(m.getAllCatgories(),index));
+	}
+	
+	public void setBodyProduit(){
+		 index.getBody().removeAll();
+		ProduitModel mo=new ProduitModel();
+		 index.getBody().repaint();
+		 index.getBody().add(new ListProduits(mo.getPro().getAllProduits(),index));
 	}
 
 }

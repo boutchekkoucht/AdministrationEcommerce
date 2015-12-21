@@ -1,4 +1,4 @@
-package com.ensas.ecommerce.views.categorie;
+package com.ensas.ecommerce.views.produit;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -16,36 +16,40 @@ import javax.swing.JTextField;
 import com.ensas.ecommerce.views.Panneau;
 import com.mysql.fabric.xmlrpc.base.Array;
 
-import metier.Produit;
 
-public class Categorie extends JPanel{
+public class Produit extends JPanel{
 	
 	
-	private JTextField id,intitule,description;
+	private JTextField id,intitule,description,prix;
 	
 	
 	
-	public Categorie(metier.Categorie c) {
+	public Produit(metier.Produit p) {
 		// TODO Auto-generated constructor stub
 		
 		
 		id=new JTextField(20);
 		intitule=new JTextField(20);
 		description=new JTextField(20);
+		prix=new JTextField(20);
 		
 		setLayout(new GridLayout(4, 1));
 		
-		if(c!=null)
+		if(p!=null)
 		add(Panneau.addLabel(id, "id"));
 		
 		add(Panneau.addLabel(intitule, "desgination"));
 		add(Panneau.addLabel(description, "desription"));
-		if(c!=null){
+		add(Panneau.addLabel(prix, "prix"));
+		
+		
+		if(p!=null){
 			
-			id.setText(""+c.getIdCategorie());
+			id.setText(""+p.getIdProduit());
 			id.setEditable(false);
-			intitule.setText(c.getNomCategorie());
-			description.setText(c.getDescription());
+			intitule.setText(p.getDesignation());
+			description.setText(p.getDescription());
+			prix.setText(""+p.getPrix());
 		}
 		
 		
@@ -100,7 +104,21 @@ public class Categorie extends JPanel{
 	public void setDescription(JTextField description) {
 		this.description = description;
 	}
-	
+
+
+
+	public JTextField getPrix() {
+		return prix;
+	}
+
+
+
+	public void setPrix(JTextField prix) {
+		this.prix = prix;
+	}
+
+
+
 	
 
 }
