@@ -12,7 +12,7 @@ import org.glassfish.web.admin.cli.ListNetworkListeners;
 import com.ensas.ecommerce.listeners.ListenerDeleteCategorie;
 import com.ensas.ecommerce.views.Index;
 
-import metier.Categorie;
+import entities.Categorie;
 
 
 

@@ -24,7 +24,7 @@ public class Produit extends JPanel{
 	
 	
 	
-	public Produit(metier.Produit p) {
+	public Produit(entities.Produit p) {
 		// TODO Auto-generated constructor stub
 		
 		

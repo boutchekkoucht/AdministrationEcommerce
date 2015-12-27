@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 import com.ensas.ecommerce.views.Index;
 
-import metier.Produit;
+import entities.Produit;
 
 
 

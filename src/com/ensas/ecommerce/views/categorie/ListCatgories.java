@@ -18,7 +18,7 @@ import com.ensas.ecommerce.views.ButtonEditor;
 import com.ensas.ecommerce.views.ButtonRenderer;
 import com.ensas.ecommerce.views.Index;
 
-import metier.Categorie;
+import entities.Categorie;
 
 
 

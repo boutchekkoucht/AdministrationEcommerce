@@ -1,8 +1,12 @@
-package metier;
+package dao;
+
+
 
 import java.util.List;
 
 import javax.ejb.Remote;
+
+import entities.Categorie;
 
 @Remote
 public interface ICategorieServices {

@@ -1,8 +1,15 @@
-package metier;
+package entities;
+
+
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Admin implements Serializable{
 	public Admin() {
 		super();
@@ -14,7 +21,8 @@ public class Admin implements Serializable{
 		this.passwordAdmin = passwordAdmin;
 		this.email = email;
 	}
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long idAdmin;
 	private String nomAdmin;
 	private String passwordAdmin;

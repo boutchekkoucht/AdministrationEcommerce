@@ -13,7 +13,6 @@ import com.ensas.ecommerce.listeners.ListenerAddProduit;
 import com.ensas.ecommerce.views.Index;
 import com.ensas.ecommerce.views.Panneau;
 
-
 public class AddProduit extends JDialog {
 	
 	private  JButton add,cancel;

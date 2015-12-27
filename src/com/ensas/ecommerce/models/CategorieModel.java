@@ -5,8 +5,10 @@ import java.util.List;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import metier.Categorie;
-import metier.ICategorieServices;
+import dao.ICategorieServices;
+import entities.Categorie;
+
+
 
 public class CategorieModel {
 
@@ -17,7 +19,7 @@ public class CategorieModel {
 		// TODO Auto-generated constructor stub
 		try {
 			InitialContext cont=new InitialContext();
-			cat=(ICategorieServices)cont.lookup("java:global/E_Commerce_grpe/ICategorieServicesImpl!metier.ICategorieServices");
+			cat=(ICategorieServices)cont.lookup("java:global/E_Commerce_grpe/ICategorieServicesImpl!dao.ICategorieServices");
 			
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block

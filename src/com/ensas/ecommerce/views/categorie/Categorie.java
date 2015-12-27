@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 import com.ensas.ecommerce.views.Panneau;
 import com.mysql.fabric.xmlrpc.base.Array;
 
-import metier.Produit;
+import entities.Produit;
 
 public class Categorie extends JPanel{
 	
@@ -25,7 +25,7 @@ public class Categorie extends JPanel{
 	
 	
 	
-	public Categorie(metier.Categorie c) {
+	public Categorie(entities.Categorie c) {
 		// TODO Auto-generated constructor stub
 		
 		

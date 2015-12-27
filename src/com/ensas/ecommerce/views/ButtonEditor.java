@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-import metier.Categorie;
+import entities.Categorie;
 
 import com.ensas.ecommerce.models.CategorieModel;
 import com.ensas.ecommerce.views.categorie.DeleteCategorie;

@@ -3,7 +3,7 @@ package com.ensas.ecommerce.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import metier.Produit;
+import entities.Produit;
 
 import com.ensas.ecommerce.models.CategorieModel;
 import com.ensas.ecommerce.models.ProduitModel;

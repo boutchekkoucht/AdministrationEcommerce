@@ -1,8 +1,10 @@
-package metier;
+package dao;
 
 import java.util.List;
 
 import javax.ejb.Local;
+
+import entities.Categorie;
 
 
 @Local

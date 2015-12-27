@@ -9,6 +9,8 @@ import com.ensas.ecommerce.views.categorie.DeleteCategorie;
 import com.ensas.ecommerce.views.categorie.ListCatgories;
 import com.ensas.ecommerce.views.categorie.UpdateCategorie;
 
+import entities.Categorie;
+
 public class ListenerUpdateCategorie implements ActionListener{
 
 
@@ -23,7 +25,11 @@ public class ListenerUpdateCategorie implements ActionListener{
 		if(e.getSource()==window.getEdit()){
 			
 		CategorieModel mo=new CategorieModel();
-			mo.editCategorie(window.getCat());
+		Categorie c= new Categorie();
+		c.setIdCategorie(Long.parseLong(window.getCatview().getId().getText()));
+		c.setDescription(window.getCatview().getDescription().getText());
+		c.setNomCategorie(window.getCatview().getIntitule().getText());
+			mo.editCategorie(c);
 			window.getIndex().getBody().removeAll();
 			window.getIndex().getBody().repaint();
 			window.getIndex().getBody().add(new ListCatgories(mo.getAllCatgories(),window.getIndex()));

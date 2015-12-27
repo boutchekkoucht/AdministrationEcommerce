@@ -5,10 +5,8 @@ import java.util.List;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import metier.Categorie;
-import metier.ICategorieServices;
-import metier.ProduitServices;
-
+import dao.ProduitServices;
+import entities.Produit;
 public class ProduitModel {
 
 	
@@ -18,7 +16,7 @@ public class ProduitModel {
 		// TODO Auto-generated constructor stub
 		try {
 			InitialContext cont=new InitialContext();
-			pro=(ProduitServices)cont.lookup("java:global/E_Commerce_grpe/ProduitImpl!metier.ProduitServices");
+			pro=(ProduitServices)cont.lookup("java:global/E_Commerce_grpe/ProduitImpl!dao.ProduitServices");
 											  
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block

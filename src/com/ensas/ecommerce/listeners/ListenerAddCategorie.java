@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
-import metier.Categorie;
+import entities.Categorie;
 
 import com.ensas.ecommerce.models.CategorieModel;
 import com.ensas.ecommerce.models.ProduitModel;

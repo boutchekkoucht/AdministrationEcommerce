@@ -1,21 +1,35 @@
-package metier;
+package entities;
+
+
 
 import java.io.Serializable;
 import java.util.Collection;
 
-
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+@Entity
 public class Categorie  implements Serializable{
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5994747257533131706L;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long idCategorie;
 	private String nomCategorie;
 	private  String description;
-	
+	@OneToMany(mappedBy="categorie",fetch=FetchType.LAZY)
 	private Collection<Produit> produits;
 	public Categorie(String nomCategorie, String description) {
 		super();
 		this.nomCategorie = nomCategorie;
 		this.description = description;
 	}
+
 	public Categorie() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -14,7 +14,7 @@ import com.ensas.ecommerce.listeners.ListenerDeleteProduit;
 import com.ensas.ecommerce.listeners.ListenerUpdateProduit;
 import com.ensas.ecommerce.views.Index;
 
-import metier.Produit;
+import entities.Produit;
 
 
 

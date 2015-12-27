@@ -5,20 +5,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-import metier.Categorie;
-import metier.Produit;
-
-import com.ensas.ecommerce.models.CategorieModel;
 import com.ensas.ecommerce.models.ProduitModel;
 import com.ensas.ecommerce.views.Index;
-import com.ensas.ecommerce.views.categorie.DeleteCategorie;
-import com.ensas.ecommerce.views.categorie.UpdateCategorie;
-import com.sun.enterprise.module.bootstrap.Main;
-import com.sun.xml.ws.commons.MaintenanceTaskExecutor;
+
+import entities.Produit;
 
 public class ButtonEditor extends DefaultCellEditor{
 	
